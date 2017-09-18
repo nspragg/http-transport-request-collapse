@@ -15,7 +15,7 @@ const url = 'http://example.com/';
 const HttpTransport = require('@bbc/http-transport');
 const collapse = require('http-transport-request-collapse');
 
-HttpTransport.createClient(collapse(HttpTransport.defaultTransport))
+HttpTransport.createClient(collapse(new HttpTransport.defaultTransport))
       .get(url)
       .asBody()
       .then((body) => {
